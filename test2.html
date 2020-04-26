@@ -7,10 +7,10 @@
     <title>Document</title>
 </head>
 <body>
+    <script src="./stat.js"></script>
+    <script src="./underscore.js"></script>
     <script>
-
-
-
+    /*  
         function reduce(array,combine,start){
             var current = start;
             for(var element of array){
@@ -22,8 +22,8 @@
         var max=function(data){
             return reduce(data,(a,b) => a>b.credit?a:b.credit)
         }
-
-        
+    */
+        var reduce = "hahaha";
 
         var data=[
             {name:'计算机安装与维护',credit:2}
@@ -33,22 +33,25 @@
             ,{name:'软件技术导论',credit:2}
             ];
 
-            console.log(
+    /* 
+        console.log(
                 reduce(
                     data,
                     function(a,b){
                         return a+b.credit
                     }
                     ,0)
-);
-
+);  
+    
 data.stat={
     max:reduce(data,(a,b) => a>b.credit?a:b.credit),
     min:reduce(data,(a,b) => a<b?a:b.credit),
     total:reduce(data,(a,b) => a + b.credit ,0)
 }
+*/
 
-
+data.stat={max:window.my.max(data)}  //第一个max为属性名，第二个max为调用的方法名} "window."可省略 window是全局变量
+console.log(data.stat);
     </script>
 </body>
 </html>
